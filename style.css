@@ -1,0 +1,97 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&family=Sofia+Sans:wght@200&display=swap');
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  /*https://images.unsplash.com/photo-1469105692624-86ae1dbf4c23?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80*/
+  body{
+   font-family: 'Sofia Sans', sans-serif;
+   background-image: url("https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   margin: 0;
+  }
+  .countdown-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+
+  }
+
+  .bigtext{
+    font-size: 6rem;
+    line-height: 1;
+    margin:0 2rem;
+    font-weight: bold;
+    }
+    .countdown-el {
+      text-align: center;
+    }
+    .countdown-el span{
+      font-size: 1.5rem;
+    }
+   
+    .wrapper{
+      display: flex;
+      margin-top: -100px;
+      padding-bottom: 100px;
+    }
+    .wrapper .static-txt{
+      color: rgb(0, 0, 0);
+      font-size: 60px;
+      margin-top: 8px;
+      font-weight: 400;
+    }
+    .wrapper .dynamic-txts{
+      margin-left: 15px;
+      height: 90px;
+      line-height: 90px;
+      overflow: hidden;
+    }
+    .dynamic-txts li{
+      list-style: none;
+      color: #FC6D6D;
+      font-size: 60px;
+      font-weight: 400;
+      position: relative;
+      top: 0;
+      animation: slide 12s steps(4) infinite;
+    }
+    @keyframes slide {
+      100%{
+        top: -360px;
+      }
+    }
+    .dynamic-txts li span{
+      position: relative;
+      margin: 7px 0;
+      line-height: 85px;
+    }
+    .dynamic-txts li span::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: #E9E9E9;
+      padding-bottom: 5px;
+      border-left: 2px solid #FC6D6D;
+      animation: typing 3s steps(10) infinite;
+    }
+    @keyframes typing {
+      40%, 60%{
+        left: calc(100% + 30px);
+      }
+      100%{
+        left: 0;
+      }
+    }
+  
